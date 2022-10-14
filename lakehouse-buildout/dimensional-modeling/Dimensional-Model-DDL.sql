@@ -2,7 +2,7 @@
 -- MAGIC %md-sandbox
 -- MAGIC # Unity Catalog : Support for Identity Columns, Primary + Foreign Key Constraints
 -- MAGIC 
--- MAGIC <img src="https://github.com/dbsys21/databricks_lakehouse/raw/main/lakehouse-buildout/dimensional_modeling/resources/dimensiona-model-design-crop.png" style="float:right; margin:10px 0px 0px 10px" width="700"/>
+-- MAGIC <img src="https://github.com/dbsys21/databricks-lakehouse/raw/main/lakehouse-buildout/dimensional-modeling/resources/dimensiona-model-design-crop.png" style="float:right; margin:10px 0px 0px 10px" width="700"/>
 -- MAGIC 
 -- MAGIC 
 -- MAGIC 
@@ -18,7 +18,7 @@
 -- MAGIC <br /><br /><br />
 -- MAGIC ## Use case
 -- MAGIC 
--- MAGIC <img src="https://raw.githubusercontent.com/dbsys21/databricks_lakehouse/main/lakehouse-buildout/dimensional_modeling/resources/star-schema.png" style="float:right; margin:10px 0px 0px 10px" width="700"/>
+-- MAGIC <img src="https://github.com/dbsys21/databricks-lakehouse/raw/main/lakehouse-buildout/dimensional-modeling/resources/star-schema.png" style="float:right; margin:10px 0px 0px 10px" width="700"/>
 -- MAGIC 
 -- MAGIC Defining PK & FK helps the BI analyst to understand the entity relationships and how to join tables. It also offers more information to BI tools who can leverage this to perform further optimisation.
 -- MAGIC 
@@ -372,7 +372,7 @@ DROP CATALOG IF EXISTS US_Stores CASCADE
 -- MAGIC %md-sandbox
 -- MAGIC # Summary
 -- MAGIC 
--- MAGIC <img src="https://raw.githubusercontent.com/dbsys21/databricks_lakehouse/main/lakehouse-buildout/dimensional_modeling/resources/star-schema.png" style="float:right; margin-left:10px" width="900"/>
+-- MAGIC <img src="https://github.com/dbsys21/databricks-lakehouse/raw/main/lakehouse-buildout/dimensional-modeling/resources/star-schema.png" style="float:right; margin-left:10px" width="900"/>
 -- MAGIC 
 -- MAGIC As you have seen Primary Keys and Foreign Keys help the BI analyst to understand the entity relationships and how to join tables and even better having code completion do the joins for you.  
 -- MAGIC 
