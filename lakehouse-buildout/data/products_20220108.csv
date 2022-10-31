@@ -1,0 +1,4 @@
+product_id,type,SKU,name,published,"is_featured","visibility_in_catalog","short_description",description,"weight_lbs",created_date,updated_date,"length_in","width_in","height_in","sale_price","regular_price",categories
+69,variable,vneck-tee,V-Neck T-Shirt v2,1,"1","visible","This is a variable product.",Description of a product,"1.5",2021-10-01 00:00:00,2022-01-07 00:00:00,"24","1","2",,,Clothing > Tshirts
+70,variable,hoodie,Hoodie v2,1,"0","visible","This is a variable product.",Description of a product,"2.5",2021-10-01 00:00:00,2022-01-08 00:00:00,"10","8","3",,,Clothing > Hoodies
+71,simple,hoodie-with-logo-v2,Hoodie with Logo v2,1,"0","visible","This is a simple product.",Description of a product,"2",2021-10-01 00:00:00,2022-01-09 00:00:00,"10","6","3",,"45",Clothing > Hoodies

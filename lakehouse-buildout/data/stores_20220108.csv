@@ -1,0 +1,4 @@
+store_id,business_key,name,email,city,address,phone_number,created_date,updated_date
+1,BNE02,Brisbane Airport V2,castillojoseph@example.net,Brisbane,"6 Ware Copse Doughertystad, NSW, 2687",0425.061.371,2021-10-01 00:00:00,2022-01-07 00:00:00
+2,PER01,Perth CBD V2,yhernandez@example.com,Perth,"Level 2 95 Jorge Vale St. Gary, NT, 2705",08-9854-6006,2021-10-01 00:00:00,2022-01-08 00:00:00
+3,CBR01,Canberra Airport,feliciasalas@example.com,Canberra,"5 Julie Reach Lake Aaron, TAS, 2955",0495-403-281,2021-10-01 00:00:00,2022-01-09 00:00:00

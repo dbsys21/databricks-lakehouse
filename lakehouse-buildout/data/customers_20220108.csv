@@ -1,0 +1,4 @@
+customer_id,name,email,created_date,updated_date
+1,Stephanie Brown,howardalejandra@example.com,2021-10-01 00:00:00,2022-01-07 00:00:00
+2,Christopher Cooper,campbelljohn@example.com,2021-10-01 00:00:00,2022-01-08 00:00:00
+3,Daniel White,colonricardo@example.com,2021-10-01 00:00:00,2022-01-09 00:00:00
