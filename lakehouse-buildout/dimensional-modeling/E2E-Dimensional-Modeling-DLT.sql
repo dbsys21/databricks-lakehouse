@@ -231,11 +231,14 @@ COMMENT "sales fact table in the gold layer" AS
   from STREAM(live.silver_sale) sale
   inner join STREAM(live.dim_date) date
   on to_date(sale.transaction_date, 'M/d/yy') = to_date(date.date, 'M/d/yyyy') 
-  inner join STREAM(live.dim_customer) customer
+  -- only join with the active customers
+  inner join (select * from STREAM(live.dim_customer) where __END_AT IS NULL) customer
   on sale.customer_id = customer.customer_id
-  inner join STREAM (live.dim_product) product
+  -- only join with the active products
+  inner join (select * from STREAM(live.dim_product) where __END_AT IS NULL) product
   on sale.product = product.SKU
-  inner join STREAM (live.dim_store) store
+    -- only join with the active products
+  inner join (select * from STREAM(live.dim_store) where __END_AT IS NULL) store
   on sale.store = store.business_key
 
 -- COMMAND ----------
