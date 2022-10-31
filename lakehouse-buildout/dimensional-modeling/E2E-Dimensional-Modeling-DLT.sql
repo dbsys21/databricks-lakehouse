@@ -215,7 +215,7 @@ FROM stream(live.silver_store)
 
 -- create the fact table for sales in gold layer
 CREATE STREAMING LIVE TABLE fact_sale (
-  CONSTRAINT valid_store_business_key EXPECT (store_business_key IS NOT NULL) ON VIOLATION DROP ROW
+  CONSTRAINT valid_store_business_key EXPECT (store_business_key IS NOT NULL) ON VIOLATION DROP ROW,
   CONSTRAINT valid_product_id EXPECT (product_id IS NOT NULL) ON VIOLATION DROP ROW
 ) 
 TBLPROPERTIES ("quality" = "gold", "ignoreChanges" = "true")
@@ -237,7 +237,7 @@ COMMENT "sales fact table in the gold layer" AS
   -- only join with the active products
   inner join (select * from STREAM(live.dim_product) where __END_AT IS NULL) product
   on sale.product = product.SKU
-    -- only join with the active products
+  -- only join with the active products
   inner join (select * from STREAM(live.dim_store) where __END_AT IS NULL) store
   on sale.store = store.business_key
 
