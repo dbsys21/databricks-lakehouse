@@ -29,7 +29,7 @@ AS  SELECT
 -- COMMAND ----------
 
 -- create raw customer view and add hash colomns for checking existence or comparison 
-CREATE OR REFRESH STREAMING LIVE VIEW raw_customer_vw
+CREATE STREAMING LIVE VIEW raw_customer_vw
 COMMENT "RAW Customer Data View"
 AS  SELECT
         sha1(UPPER(TRIM(c_custkey))) as sha1_hub_custkey,
@@ -73,7 +73,7 @@ AS  SELECT
 -- COMMAND ----------
 
 -- create raw order view and add hash colomns for checking existence or comparison 
-CREATE OR REFRESH STREAMING LIVE VIEW raw_orders_vw 
+CREATE STREAMING LIVE VIEW raw_orders_vw 
 COMMENT "RAW Order Data View"
 AS  SELECT
         sha1(UPPER(TRIM(o_orderkey))) as sha1_hub_orderkey,
@@ -202,7 +202,7 @@ AS  SELECT
 -- COMMAND ----------
 
 -- create raw lineitem view and add hash coloums for checking existence 
-CREATE OR REFRESH STREAMING LIVE VIEW raw_lineitem_vw 
+CREATE STREAMING LIVE VIEW raw_lineitem_vw 
 COMMENT "RAW LineItem View"
 AS  SELECT
         sha1(concat(UPPER(TRIM(l_orderkey)),UPPER(TRIM(l_linenumber)))) as sha1_hub_lineitem,
@@ -481,7 +481,7 @@ AS SELECT
 -- COMMAND ----------
 
 -- create customer dimension as view in data mart from the hub and satellite customer table, ref nation and ref region table
-CREATE OR REFRESH VIEW dim_customer
+CREATE LIVE VIEW dim_customer
        AS
        SELECT 
              sat.sha1_hub_custkey      AS dim_customer_key,
@@ -507,7 +507,7 @@ CREATE OR REFRESH VIEW dim_customer
 -- COMMAND ----------
 
 -- create order dimension as view in data mart from the hub and satellite order table
-CREATE OR REFRESH VIEW dim_orders
+CREATE LIVE VIEW dim_orders
        AS
        SELECT 
            hub.sha1_hub_orderkey                         AS dim_order_key,
